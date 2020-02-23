@@ -57,8 +57,8 @@ class CMakeBuild(build_ext):
         subprocess.check_call(['cmake', '--build', '.'] + build_args, cwd=self.build_temp)
 
 setup(
-    name='pyrx',
-    version='0.0.3',
+    name='pyrandx',
+    version='0.0.6',
     author='Jethro Grassie',
     author_email='jtgrassie@users.noreply.github.com',
     description='Python RandomX hashing module',
