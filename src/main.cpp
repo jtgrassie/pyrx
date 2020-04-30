@@ -27,6 +27,7 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <pybind11/pybind11.h>
+#include <thread>
 #include "rx-slow-hash.h"
 
 namespace py = pybind11;
@@ -34,7 +35,7 @@ namespace py = pybind11;
 py::bytes get_rx_hash(const std::string &input,
         const std::string &seed_hash, const uint64_t height)
 {
-    static unsigned miners = 1;
+    static unsigned miners = std::thread::hardware_concurrency();
     uint64_t seed_height = rx_seedheight(height);
     std::string output;
     output.resize(32);

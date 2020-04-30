@@ -58,7 +58,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name='pyrx',
-    version='0.0.3',
+    version='0.0.4',
     author='Jethro Grassie',
     author_email='jtgrassie@users.noreply.github.com',
     description='Python RandomX hashing module',

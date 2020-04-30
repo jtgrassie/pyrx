@@ -1,7 +1,7 @@
 import pyrx
 import binascii
 
-assert pyrx.__version__ == '0.0.3'
+assert pyrx.__version__ >= '0.0.3'
 
 expected = [
         'a86260b7bf2c35910177ae47bad732b415d977d865a3d64c12e06a3f012b2ee7',
