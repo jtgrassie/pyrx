@@ -33,7 +33,9 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#ifdef __linux__
 #include <unistd.h>
+#endif
 #include <limits.h>
 
 #include "randomx.h"
