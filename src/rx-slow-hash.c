@@ -33,8 +33,14 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <limits.h>
+
+/* Unistd.h is only avalible on UNIX Systems, Unless we were using a WSL*/
+#ifndef _WIN32
+  #include <unistd.h>
+#else
+  #include <windows.h>
+#endif
 
 #include "randomx.h"
 #include "c_threads.h"
